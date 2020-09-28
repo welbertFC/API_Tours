@@ -23,7 +23,6 @@ from commentreview.api.viewsets import CommentReviewViewSet
 from evaluation.api.viewsets import EvaluationViewSet
 from django.contrib.auth.models import User
 
-
 from django.conf.urls import include
 
 routers = routers.DefaultRouter()
@@ -33,9 +32,6 @@ routers.register(r'location', LocationViewSet)
 routers.register(r'comment', CommentReviewViewSet)
 routers.register(r'evaluation', EvaluationViewSet)
 routers.register(r'user', User)
-
-
-
 
 urlpatterns = [
     path('', include(routers.urls)),

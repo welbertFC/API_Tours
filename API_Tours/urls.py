@@ -16,13 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
+
+# imports views Set
 from tourist_point.api.viewsets import TouristPointViewSet
 from attractions.api.viewsets import AttractionsViewSet
 from location.api.viewsets import LocationViewSet
 from commentreview.api.viewsets import CommentReviewViewSet
 from evaluation.api.viewsets import EvaluationViewSet
-from django.contrib.auth.models import User
-
 
 from django.conf.urls import include
 
@@ -33,9 +33,6 @@ routers.register(r'location', LocationViewSet)
 routers.register(r'comment', CommentReviewViewSet)
 routers.register(r'evaluation', EvaluationViewSet)
 routers.register(r'user', User)
-
-
-
 
 urlpatterns = [
     path('', include(routers.urls)),

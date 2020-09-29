@@ -32,7 +32,6 @@ routers.register(r'attractions', AttractionsViewSet)
 routers.register(r'location', LocationViewSet)
 routers.register(r'comment', CommentReviewViewSet)
 routers.register(r'evaluation', EvaluationViewSet)
-routers.register(r'user', User)
 
 urlpatterns = [
     path('', include(routers.urls)),

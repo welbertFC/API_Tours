@@ -23,6 +23,7 @@ from attractions.api.viewsets import AttractionsViewSet
 from location.api.viewsets import LocationViewSet
 from commentreview.api.viewsets import CommentReviewViewSet
 from evaluation.api.viewsets import EvaluationViewSet
+from user.api.viewsets import UserViewSet
 
 from django.conf.urls import include
 
@@ -32,6 +33,7 @@ routers.register(r'attractions', AttractionsViewSet)
 routers.register(r'location', LocationViewSet)
 routers.register(r'comment', CommentReviewViewSet)
 routers.register(r'evaluation', EvaluationViewSet)
+routers.register(r'user', UserViewSet)
 
 urlpatterns = [
     path('', include(routers.urls)),
